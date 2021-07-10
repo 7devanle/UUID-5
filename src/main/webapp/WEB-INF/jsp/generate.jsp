@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="list">
+	<form method="post" action="generate">
 		CLICK TO GENERATE<input type="submit" name="Submit" value="GENERATE">
 		<br>
 	</form>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1> lists of UUIDS available </h1>
-	<h3>${uuid }</h3>
+	<h3>${uuuid }</h3>
 	DATE&TIME: <%= new java.util.Date() %>
 	<br>
 </body>
