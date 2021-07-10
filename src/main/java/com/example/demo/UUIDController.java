@@ -15,9 +15,9 @@ public class UUIDController {
 	UuidRepo repo;
 	
 //	generate uuid and print existing ones
-	@RequestMapping("")
+	@RequestMapping("/")
 	@ResponseBody
-	public List<UUIDClass> list(@RequestParam()UUIDClass uuid) {
+	public List<UUIDClass> list(UUIDClass uuid) {
 		uuid = new UUIDClass();
 		repo.save(uuid);
 		return repo.findAll();
