@@ -14,6 +14,12 @@ public class UUIDController {
 	@Autowired 
 	UuidRepo repo;
 	
+//	link to generate
+//	@RequestMapping("/")
+//	public String generate() {
+//		return "generate";
+//	}
+	
 //	generate uuid and print existing ones
 	@RequestMapping("/")
 	@ResponseBody
@@ -21,13 +27,21 @@ public class UUIDController {
 		uuid = new UUIDClass();
 		repo.save(uuid);
 		return repo.findAll();
+		
 	}
+//	@PostMapping("/modellist")
+//	public ModelAndView viewUUIDS(@RequestParam UUID uuid ) {
+//		ModelAndView mv = new ModelAndView("list");
+//		List<UUIDClass> uuuid = repo.findAll();
+//		mv.addObject(uuuid);
+//		return mv;
+//	}
 	
 //	get existing UUIDs and time in list format
 	@RequestMapping("uuids")
 	@ResponseBody
 	public List<UUIDClass> listOfUuids() {
-		return repo.findAll();
+		return repo.findAll();		
 	}
 	
 //	get single uuid and time
