@@ -29,7 +29,6 @@ public class UUIDController {
 		return repo.findAll();
 		
 	}
-	
 	@PostMapping("/modellist")
 	public ModelAndView viewUUIDS(@RequestParam UUID uuid ) {
 		ModelAndView mv = new ModelAndView("list");
