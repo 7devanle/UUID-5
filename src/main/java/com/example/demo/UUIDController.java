@@ -23,13 +23,13 @@ public class UUIDController {
 //	generate uuid and print existing ones
 	@RequestMapping("generate")
 	@ResponseBody
-	public List<UUIDClass> list(UUIDClass uuid) {
-		uuid = new UUIDClass();
-		repo.save(uuid);
-		return repo.findAll();
-		
-	}
-	@PostMapping("/modellist")
+//	public List<UUIDClass> list(UUIDClass uuid) {
+//		uuid = new UUIDClass();
+//		repo.save(uuid);
+//		return repo.findAll();
+//		
+//	}
+	@PostMapping("/generate")
 	public ModelAndView viewUUIDS(@RequestParam UUID uuid ) {
 		ModelAndView mv = new ModelAndView("list");
 		List<UUIDClass> uuuid = repo.findAll();
